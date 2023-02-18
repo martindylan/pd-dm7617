@@ -1,0 +1,136 @@
+#N canvas 3 35 1360 708 12;
+#X obj 12 156 cnv 15 525 294 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 12 674 cnv 15 519 246 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X msg 22 690 poly \$1;
+#X msg 22 725 legato \$1;
+#X msg 22 807 bendMode \$1;
+#X msg 22 852 bendRange \$1;
+#X msg 22 890 out \$1;
+#X text 9 128 INLET 1:;
+#X text 9 10 INLET 0:;
+#X obj 12 38 cnv 15 281 70 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X msg 22 48 \$1 \$2;
+#X msg 22 78 bend \$1;
+#X obj 598 38 cnv 15 135 39 empty empty empty 20 12 0 14 -204800 -66577
+0;
+#X text 595 10 OUTLET 0:;
+#X obj 608 48 sig~;
+#X obj 598 125 cnv 15 499 111 empty empty empty 20 12 0 14 -204800
+-66577 0;
+#X msg 608 141 set foo;
+#X obj 599 435 cnv 15 441 90 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 595 97 OUTLET 1:;
+#X msg 22 195 opN gain \$1;
+#X msg 22 225 opN att \$1;
+#X msg 22 255 opN dec \$1;
+#X msg 22 315 opN rel \$1;
+#X msg 22 285 opN sus \$1;
+#X msg 22 352 opN freq \$1;
+#X msg 22 390 opN fine \$1;
+#X msg 22 420 opN lfo \$1;
+#X obj 12 463 cnv 15 483 69 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X msg 22 473 op1_self fine \$1;
+#X msg 22 502 op1_self lfo \$1;
+#X obj 12 543 cnv 15 281 69 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X msg 22 553 lfo gain \$1;
+#X msg 22 582 lfo freq \$1;
+#X obj 12 623 cnv 15 267 40 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X msg 22 633 alg \$1;
+#X obj 12 931 cnv 15 497 40 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X msg 22 941 state \$1;
+#X text 69 48 mensaje midi (nota y velocity);
+#X text 83 78 pitch bend (de 0 a 16383);
+#X text 20 165 ***donde N representa op1 \, op2 \, op3 u op4***;
+#X text 109 345 la frecuencia del operador será el producto de este
+valor y la frecuencia de la nota actual;
+#X text 138 502 igual que [opN lfo \$1(;
+#X text 111 553 igual que [opN gain \$1(;
+#X text 111 800 pitch bend afecta a todas las notas o sólo a la última
+(distinto de cero y 0 respectivamente);
+#X text 648 48 canal mono;
+#X text 669 134 donde foo representa una lista de todos los parámetros
+correctamente formateados para ser enviados de vuelta a la abstracción
+\, en otras palabras \, conectar esta salida a un mensaje y cuando
+la abstracción reciba el mensaje [state(] \, se guardará el estado
+actual de la abstracción (tener en cuenta que el mensaje se vaciará
+antes de escribir en él);
+#X text 598 407 CUIDADO:;
+#X text 606 444 -en modo monofónico \, bendMode debe ser global \,
+de lo contrario es posible que no tenga ningún efecto;
+#X text 606 483 -en modo polifónico el legato debe apagarse \, de
+lo contrario algunas voces pueden no sonar en absoluto;
+#X text 89 941 escribir un mensaje con el estado actual de la abstracción
+;
+#X msg 22 762 anticlick \$1;
+#X obj 598 324 cnv 15 385 63 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 597 296 DEPENDENCIAS:;
+#X text 605 333 -para que la abstracción funcione debe instalarse
+la abstracción [adsr~] (https://github.com/teaecetyrannis/pd-adsr)
+;
+#X obj 599 613 cnv 15 442 412 empty empty empty 20 12 0 14 -204786
+-66577 0;
+#X text 598 585 ACERCA DE:;
+#X text 607 622 sintetizador fm basado en el chip ym2612 \, cuenta
+con las mismas prestaciones: \; -4 operadores \; -envolventes para
+cada operador \; -automodulación del primer operador \; -7 algoritmos
+idénticos a los del ym2612 \; -un lfo con capacidad de modular independientemente
+y a cierto grado la amplitud y/o frecuencia de cada operador \; \;
+cuenta también con algunas diferencias: \; -ganancia global del lfo
+\; -la frecuencia del lfo \, el grado de am y el de fm pueden ser cualquier
+valor en vez de una serie de valores fijos \; -posibilidad de modular
+mediante lfo la copia del operador 1 independientemente de la modulación
+de éste \; -fine-tuning para la frecuencia de cada operador \; -polifonía
+de 16 voces \; -legato \; -pitch bend configurable \; \; la documentación
+utilizada para el desarrollo del sintetizador es una restauración
+del manual técnico de la consola sega mega drive y se puede encontrar
+en https://www.smspower.org/maxim/Documents/YM2612 \; \; dylan martin
+;
+#X obj 12 991 loadbang;
+#X msg 12 1016 0;
+#X obj 12 1041 switch~;
+#X text 111 195 ganancia del operador (0 a 100%);
+#X text 103 285 valor de sostenimiento (0 a 100%);
+#X text 103 420 cantidad (0 a 100%) del lfo que alterará al operador
+;
+#X text 75 633 elegir el algoritmo (0 a 7);
+#X text 145 473 ganancia de la automodulación del op1 (0 a 100%);
+#X text 103 225 tiempo de ataque (ms);
+#X text 103 255 tiempo de decaimiento (ms);
+#X text 103 315 tiempo de relajación (ms);
+#X text 110 390 fine-tuning (cents);
+#X text 111 582 frecuencia del lfo (hz);
+#X text 83 683 elegir entre modo polifónico de 16 voces o monofónico
+(distinto de cero y 0 respectivamente);
+#X text 96 725 usar o no legato (distinto de cero y 0 respectivamente)
+;
+#X text 76 890 ganancia de salida en (dB);
+#X text 117 845 rango del pitch bend tanto hacia arriba como hacia
+abajo (semitonos);
+#X text 118 755 usar o no usar anticlick (distinto de cero y 0 respectivamente)
+(consultar objeto adsr~);
+#X connect 2 0 3 0;
+#X connect 3 0 50 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 10 0 11 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 21 0 23 0;
+#X connect 22 0 24 0;
+#X connect 23 0 22 0;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 28 0 29 0;
+#X connect 31 0 32 0;
+#X connect 50 0 4 0;
+#X connect 57 0 58 0;
+#X connect 58 0 59 0;
