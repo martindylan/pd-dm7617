@@ -1,4 +1,4 @@
-#N canvas 3 35 1360 708 12;
+#N canvas 913 52 451 692 12;
 #X obj 12 156 cnv 15 525 294 empty empty empty 20 12 0 14 -203904 -66577
 0;
 #X obj 12 674 cnv 15 519 246 empty empty empty 20 12 0 14 -203904 -66577
@@ -70,12 +70,9 @@ lo contrario algunas voces pueden no sonar en absoluto;
 #X text 89 941 escribir un mensaje con el estado actual de la abstracción
 ;
 #X msg 22 762 anticlick \$1;
-#X obj 598 324 cnv 15 385 63 empty empty empty 20 12 0 14 -261234 -66577
+#X obj 598 324 cnv 15 441 63 empty empty empty 20 12 0 14 -261234 -66577
 0;
 #X text 597 296 DEPENDENCIAS:;
-#X text 605 333 -para que la abstracción funcione debe instalarse
-la abstracción [adsr~] (https://github.com/teaecetyrannis/pd-adsr)
-;
 #X obj 599 613 cnv 15 442 412 empty empty empty 20 12 0 14 -204786
 -66577 0;
 #X text 598 585 ACERCA DE:;
@@ -117,6 +114,8 @@ en https://www.smspower.org/maxim/Documents/YM2612 \; \; dylan martin
 abajo (semitonos);
 #X text 118 755 usar o no usar anticlick (distinto de cero y 0 respectivamente)
 (consultar objeto adsr~);
+#X text 605 333 -para que la abstracción funcione debe instalarse
+la abstracción [adsr~] (https://github.com/martindylan/pd-adsr);
 #X connect 2 0 3 0;
 #X connect 3 0 50 0;
 #X connect 4 0 5 0;
@@ -132,5 +131,5 @@ abajo (semitonos);
 #X connect 28 0 29 0;
 #X connect 31 0 32 0;
 #X connect 50 0 4 0;
+#X connect 56 0 57 0;
 #X connect 57 0 58 0;
-#X connect 58 0 59 0;
