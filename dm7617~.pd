@@ -127,32 +127,32 @@ y anticlick;
 #X connect 7 0 8 0;
 #X connect 9 0 6 0;
 #X restore 492 249 pd adsr;
-#X obj 16 87 cnv 15 428 247 empty \$0-text empty 20 12 0 14 -262144
--1 0;
-#X obj 406 273 vsl 10 53 -100 0 0 0 \$0-out \$0-out-r out: 0 -12 0
-10 -1 -262144 -1 5200 1;
-#X obj 122 92 cnv 2 1 155 empty \$0-bar empty 20 12 0 14 -1 -1 0;
+#X obj 16 87 cnv 15 428 247 empty \$0-text empty 20 12 0 14 #fcfcfc
+#000000 0;
+#X obj 122 92 cnv 2 1 155 empty \$0-bar empty 20 12 0 14 #000000 #000000
+0;
 #X obj 233 292 nbx 3 15 0 1e+37 0 0 \$0-lfo-freq \$0-lfo-freq-r hz
-41 8 0 10 -1 -262144 -1 0 256;
-#X obj 21 253 cnv 2 418 1 empty \$0-bar empty 20 12 0 14 -1 -1 0;
-#X obj 358 287 nbx 1 15 0 7 0 0 \$0-alg \$0-alg-r empty 0 -8 0 10 -1
--262144 -1 7 256;
-#X obj 83 289 tgl 10 0 \$0-legato \$0-legato-r legato 15 4 0 10 -1
--262144 -1 0 1;
-#X obj 304 298 cnv 2 1 5 empty \$0-route-op1-cable empty 20 12 0 14
--1 -70738 0;
-#X obj 318 298 cnv 2 1 5 empty \$0-route-op2-cable empty 20 12 0 14
--1 -70738 0;
-#X obj 332 298 cnv 2 1 5 empty \$0-route-op3-cable empty 20 12 0 14
--1 -70738 0;
-#X obj 346 298 cnv 2 1 5 empty \$0-route-op4-cable empty 20 12 0 14
--1 -70738 0;
+41 8 0 10 #000000 #fcfcfc #000000 0 256;
+#X obj 21 253 cnv 2 418 1 empty \$0-bar empty 20 12 0 14 #000000 #000000
+0;
+#X obj 358 287 nbx 1 15 0 7 0 0 \$0-alg \$0-alg-r empty 0 -8 0 10 #000000
+#fcfcfc #000000 0 256;
+#X obj 83 289 tgl 10 0 \$0-legato \$0-legato-r legato 15 4 0 10 #000000
+#fcfcfc #000000 0 1;
+#X obj 326 282 cnv 2 1 22 empty \$0-route-op1-cable empty 20 12 0 14
+#000000 #444444 0;
+#X obj 340 282 cnv 2 1 5 empty \$0-route-op2-cable empty 20 12 0 14
+#000000 #444444 0;
+#X obj 340 299 cnv 2 1 5 empty \$0-route-op3-cable empty 20 12 0 14
+#000000 #444444 0;
+#X obj 333 316 cnv 2 1 5 empty \$0-route-op4-cable empty 20 12 0 14
+#000000 #444444 0;
 #X obj 30 98 cnv 2 1 5 empty \$0-route-op1-cable2 empty 20 12 0 14
--1 -70738 0;
+#000000 #444444 0;
 #X obj 30 98 cnv 2 1 5 empty \$0-route-op1-cable3 empty 20 12 0 14
--1 -70738 0;
+#000000 #444444 0;
 #X obj 30 98 cnv 2 30 1 empty \$0-route-op1-cableh empty 20 12 0 14
--1 -70738 0;
+#000000 #444444 0;
 #N canvas 674 178 677 300 out 0;
 #X msg 12 114 \$1 1;
 #X obj 12 167 outlet~;
@@ -219,10 +219,10 @@ produzcan clicks;
 ;
 #X obj 124 139 list prepend freq;
 #X obj 124 221 outlet;
-#X floatatom 342 138 5 0 0 0 - - -;
-#X floatatom 288 168 5 0 0 0 - - -;
-#X floatatom 232 175 5 0 0 0 - - -;
-#X floatatom 178 205 5 0 0 0 - - -;
+#X floatatom 342 138 5 0 0 0 - - - 0;
+#X floatatom 288 168 5 0 0 0 - - - 0;
+#X floatatom 232 175 5 0 0 0 - - - 0;
+#X floatatom 178 205 5 0 0 0 - - - 0;
 #X connect 0 0 11 0;
 #X connect 1 0 11 0;
 #X connect 2 0 11 0;
@@ -300,11 +300,11 @@ produzcan clicks;
 #X obj 12 169 - 1;
 #X obj 12 228 pack 0 0 0;
 #X obj 93 361 spigot;
-#X obj 132 346 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 132 346 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 12 361 spigot;
-#X obj 51 346 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
+#X obj 51 346 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 258 303 spigot;
 #X msg 297 284 1;
 #X msg 322 284 0;
@@ -2077,11 +2077,11 @@ de cada operador;
 #X connect 13 0 14 0;
 #X restore 274 18 pd alg-visualization;
 #X obj 83 319 hradio 10 1 0 2 \$0-bendMode \$0-bendMode-r bend:_global
-25 4 0 10 -262144 -1 -1 0;
-#X obj 83 274 hradio 10 1 0 2 \$0-poly \$0-poly-r mono 25 4 0 10 -262144
--1 -1 0;
+25 4 0 10 #fcfcfc #000000 #000000 0;
+#X obj 83 274 hradio 10 1 0 2 \$0-poly \$0-poly-r mono 25 4 0 10 #fcfcfc
+#000000 #000000 0;
 #X obj 21 273 vsl 10 53 0 100 0 0 \$0-op1-self-gain \$0-op1-self-gain-r
-op1_self: 0 -9 0 10 -1 -262144 -1 0 1;
+op1_self: 0 -9 0 10 #000000 #fcfcfc #000000 0 1;
 #N canvas -8 -8 1366 685 alg 0;
 #X obj 12 12 r \$0-alg;
 #X obj 12 123 outlet;
@@ -2483,8 +2483,8 @@ out \$7;
 #X obj 542 289 != 0;
 #X obj 825 358 s \$0-error;
 #X obj 23 553 r \$0-error;
-#X obj 23 577 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X obj 23 577 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
 #X msg 23 597 se recibió un mensaje desconocido;
 #X obj 23 626 print dm7617~;
 #X obj 486 159 != 0;
@@ -2817,107 +2817,113 @@ state, f 65;
 #X connect 40 0 6 0;
 #X restore 600 109 pd route-inlet-messages;
 #X obj 36 287 vsl 10 39 0 100 0 0 \$0-op1-self-lfo-am \$0-op1-self-lfo-am-r
-am 0 -9 0 10 -1 -262144 -1 0 1;
-#X obj 77 260 cnv 2 1 69 empty \$0-bar empty 20 12 0 14 -1 -1 0;
+am 0 -9 0 10 #000000 #fcfcfc #000000 0 1;
+#X obj 77 260 cnv 2 1 69 empty \$0-bar empty 20 12 0 14 #000000 #000000
+0;
 #X obj 625 414 outlet;
 #X obj 625 385 r \$0-state;
 #X obj 128 107 vsl 10 70 0 100 0 0 \$0-op2-gain \$0-op2-gain-r op2:
-0 -12 0 10 -1 -262144 -1 0 1;
+0 -12 0 10 #000000 #fcfcfc #000000 0 1;
 #X obj 164 105 nbx 4 15 0 1e+37 0 0 \$0-op2-att \$0-op2-att-r ms 50
-8 0 10 -1 -262144 -1 0 256;
+8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 164 125 nbx 4 15 0 1e+37 0 0 \$0-op2-dec \$0-op2-dec-r ms 50
-8 0 10 -1 -262144 -1 0 256;
+8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 164 145 nbx 4 15 0 1e+37 0 0 \$0-op2-sus \$0-op2-sus-r % 50
-8 0 10 -1 -262144 -1 0 256;
+8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 164 165 nbx 4 15 0 1e+37 0 0 \$0-op2-rel \$0-op2-rel-r ms 50
-8 0 10 -1 -262144 -1 0 256;
+8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 157 205 nbx 5 15 -1e+37 1e+37 0 0 \$0-op2-fine \$0-op2-fine-r
-empty 58 8 0 10 -1 -262144 -1 0 256;
+empty 58 8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 148 225 hsl 74 10 0 100 0 0 \$0-op2-lfo-am \$0-op2-lfo-am-r
-am -20 4 0 10 -1 -262144 -1 0 1;
-#X obj 229 92 cnv 2 1 155 empty \$0-bar empty 20 12 0 14 -1 -1 0;
+am -20 4 0 10 #000000 #fcfcfc #000000 0 1;
+#X obj 229 92 cnv 2 1 155 empty \$0-bar empty 20 12 0 14 #000000 #000000
+0;
 #X obj 157 185 nbx 4 15 -1e+37 1e+37 0 0 \$0-op2-freq \$0-op2-freq-r
-empty 0 -8 0 10 -1 -262144 -1 0 256;
-#X obj 143 105 cnv 15 15 15 empty \$0-text att 0 6 0 10 -262144 -1
+empty 0 -8 0 10 #000000 #fcfcfc #000000 0 256;
+#X obj 143 105 cnv 15 15 15 empty \$0-text att 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 143 125 cnv 15 15 15 empty \$0-text dec 0 6 0 10 -262144 -1
+#X obj 143 125 cnv 15 15 15 empty \$0-text dec 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 143 145 cnv 15 15 15 empty \$0-text sus 0 6 0 10 -262144 -1
+#X obj 143 145 cnv 15 15 15 empty \$0-text sus 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 143 165 cnv 15 15 15 empty \$0-text rel 0 6 0 10 -262144 -1
+#X obj 143 165 cnv 15 15 15 empty \$0-text rel 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 128 185 cnv 15 15 15 empty \$0-text freq 0 6 0 10 -262144 -1
+#X obj 128 185 cnv 15 15 15 empty \$0-text freq 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 128 205 cnv 15 15 15 empty \$0-text fine 0 6 0 10 -262144 -1
+#X obj 128 205 cnv 15 15 15 empty \$0-text fine 0 6 0 10 #fcfcfc #000000
 0;
 #X obj 235 107 vsl 10 70 0 100 0 0 \$0-op3-gain \$0-op3-gain-r op3:
-0 -12 0 10 -1 -262144 -1 0 1;
+0 -12 0 10 #000000 #fcfcfc #000000 0 1;
 #X obj 271 105 nbx 4 15 0 1e+37 0 0 \$0-op3-att \$0-op3-att-r ms 50
-8 0 10 -1 -262144 -1 0 256;
+8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 271 125 nbx 4 15 0 1e+37 0 0 \$0-op3-dec \$0-op3-dec-r ms 50
-8 0 10 -1 -262144 -1 0 256;
+8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 271 145 nbx 4 15 0 1e+37 0 0 \$0-op3-sus \$0-op3-sus-r % 50
-8 0 10 -1 -262144 -1 0 256;
+8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 271 165 nbx 4 15 0 1e+37 0 0 \$0-op3-rel \$0-op3-rel-r ms 50
-8 0 10 -1 -262144 -1 0 256;
+8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 264 205 nbx 5 15 -1e+37 1e+37 0 0 \$0-op3-fine \$0-op3-fine-r
-empty 58 8 0 10 -1 -262144 -1 0 256;
+empty 58 8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 255 238 hsl 74 10 0 100 0 0 \$0-op3-lfo-fm \$0-op3-lfo-fm-r
-fm -20 4 0 10 -1 -262144 -1 0 1;
-#X obj 337 92 cnv 2 1 155 empty \$0-bar empty 20 12 0 14 -1 -1 0;
+fm -20 4 0 10 #000000 #fcfcfc #000000 0 1;
+#X obj 337 92 cnv 2 1 155 empty \$0-bar empty 20 12 0 14 #000000 #000000
+0;
 #X obj 264 185 nbx 4 15 -1e+37 1e+37 0 0 \$0-op3-freq \$0-op3-freq-r
-empty 0 -8 0 10 -1 -262144 -1 0 256;
-#X obj 250 105 cnv 15 15 15 empty \$0-text att 0 6 0 10 -262144 -1
+empty 0 -8 0 10 #000000 #fcfcfc #000000 0 256;
+#X obj 250 105 cnv 15 15 15 empty \$0-text att 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 250 125 cnv 15 15 15 empty \$0-text dec 0 6 0 10 -262144 -1
+#X obj 250 125 cnv 15 15 15 empty \$0-text dec 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 250 145 cnv 15 15 15 empty \$0-text sus 0 6 0 10 -262144 -1
+#X obj 250 145 cnv 15 15 15 empty \$0-text sus 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 250 165 cnv 15 15 15 empty \$0-text rel 0 6 0 10 -262144 -1
+#X obj 250 165 cnv 15 15 15 empty \$0-text rel 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 235 185 cnv 15 15 15 empty \$0-text freq 0 6 0 10 -262144 -1
+#X obj 235 185 cnv 15 15 15 empty \$0-text freq 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 235 205 cnv 15 15 15 empty \$0-text fine 0 6 0 10 -262144 -1
+#X obj 235 205 cnv 15 15 15 empty \$0-text fine 0 6 0 10 #fcfcfc #000000
 0;
 #X obj 343 107 vsl 10 70 0 100 0 0 \$0-op4-gain \$0-op4-gain-r op4:
-0 -12 0 10 -1 -262144 -1 6900 1;
+0 -12 0 10 #000000 #fcfcfc #000000 0 1;
 #X obj 379 105 nbx 4 15 0 1e+37 0 0 \$0-op4-att \$0-op4-att-r ms 50
-8 0 10 -1 -262144 -1 0 256;
+8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 379 125 nbx 4 15 0 1e+37 0 0 \$0-op4-dec \$0-op4-dec-r ms 50
-8 0 10 -1 -262144 -1 0 256;
+8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 379 145 nbx 4 15 0 1e+37 0 0 \$0-op4-sus \$0-op4-sus-r % 50
-8 0 10 -1 -262144 -1 100 256;
+8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 379 165 nbx 4 15 0 1e+37 0 0 \$0-op4-rel \$0-op4-rel-r ms 50
-8 0 10 -1 -262144 -1 0 256;
+8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 372 205 nbx 5 15 -1e+37 1e+37 0 0 \$0-op4-fine \$0-op4-fine-r
-empty 58 8 0 10 -1 -262144 -1 0 256;
+empty 58 8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 363 225 hsl 74 10 0 100 0 0 \$0-op4-lfo-am \$0-op4-lfo-am-r
-am -20 4 0 10 -1 -262144 -1 0 1;
+am -20 4 0 10 #000000 #fcfcfc #000000 0 1;
 #X obj 372 185 nbx 4 15 -1e+37 1e+37 0 0 \$0-op4-freq \$0-op4-freq-r
-empty 0 -8 0 10 -1 -262144 -1 1 256;
-#X obj 358 105 cnv 15 15 15 empty \$0-text att 0 6 0 10 -262144 -1
+empty 0 -8 0 10 #000000 #fcfcfc #000000 0 256;
+#X obj 358 105 cnv 15 15 15 empty \$0-text att 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 358 125 cnv 15 15 15 empty \$0-text dec 0 6 0 10 -262144 -1
+#X obj 358 125 cnv 15 15 15 empty \$0-text dec 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 358 145 cnv 15 15 15 empty \$0-text sus 0 6 0 10 -262144 -1
+#X obj 358 145 cnv 15 15 15 empty \$0-text sus 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 358 165 cnv 15 15 15 empty \$0-text rel 0 6 0 10 -262144 -1
+#X obj 358 165 cnv 15 15 15 empty \$0-text rel 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 343 185 cnv 15 15 15 empty \$0-text freq 0 6 0 10 -262144 -1
+#X obj 343 185 cnv 15 15 15 empty \$0-text freq 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 343 205 cnv 15 15 15 empty \$0-text fine 0 6 0 10 -262144 -1
+#X obj 343 205 cnv 15 15 15 empty \$0-text fine 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 83 262 cnv 10 30 6 empty \$0-text voices: 1 2 0 10 -262144 -1
+#X obj 83 262 cnv 10 30 6 empty \$0-text voices: 1 2 0 10 #fcfcfc #000000
 0;
-#X obj 183 260 cnv 2 1 69 empty \$0-bar empty 20 12 0 14 -1 -1 0;
+#X obj 183 260 cnv 2 1 69 empty \$0-bar empty 20 12 0 14 #000000 #000000
+0;
 #X obj 189 273 vsl 10 53 0 100 0 0 \$0-lfo-gain \$0-lfo-gain-r lfo
-0 -9 0 10 -1 -262144 -1 0 1;
-#X obj 204 292 cnv 15 15 15 empty \$0-text freq 0 6 0 10 -262144 -1
+0 -9 0 10 #000000 #fcfcfc #000000 0 1;
+#X obj 204 292 cnv 15 15 15 empty \$0-text freq 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 290 260 cnv 2 1 69 empty \$0-bar empty 20 12 0 14 -1 -1 0;
-#X obj 296 262 cnv 15 20 6 empty \$0-text alg: 1 2 0 10 -262144 -1
+#X obj 290 260 cnv 2 1 69 empty \$0-bar empty 20 12 0 14 #000000 #000000
 0;
-#X obj 382 260 cnv 2 1 69 empty \$0-bar empty 20 12 0 14 -1 -1 0;
+#X obj 296 262 cnv 15 20 6 empty \$0-text alg: 1 2 0 10 #fcfcfc #000000
+0;
+#X obj 382 260 cnv 2 1 69 empty \$0-bar empty 20 12 0 14 #000000 #000000
+0;
 #N canvas -8 -8 1366 685 switch 0;
 #X obj 209 138 symbol;
 #X msg 209 167 label \$1;
@@ -2957,28 +2963,28 @@ la lógia detrás del gráfico del ruteo del algoritmo seleccionado
 relacionados al sintetizador \, se los opera matemáticamente de ser
 necesario \, y luego se formatean apropiadamente como mensajes para
 ser recibidos por todas las instancias del [clone];
-#X obj 314 287 cnv 10 10 10 empty \$0-route-op2 2 3 5 0 10 -1 -262144
-0;
-#X obj 328 287 cnv 10 10 10 empty \$0-route-op3 3 3 5 0 10 -1 -262144
-0;
-#X obj 342 287 cnv 10 10 10 empty \$0-route-op4 4 3 5 0 10 -1 -262144
-0;
-#X obj 300 287 cnv 10 10 10 empty \$0-route-op1 1 3 5 0 10 -1 -262144
-0;
+#X obj 336 271 cnv 10 10 10 empty \$0-route-op2 2 3 5 0 10 #000000
+#fcfcfc 0;
+#X obj 336 288 cnv 10 10 10 empty \$0-route-op3 3 3 5 0 10 #000000
+#fcfcfc 0;
+#X obj 329 305 cnv 10 10 10 empty \$0-route-op4 4 3 5 0 10 #000000
+#fcfcfc 0;
+#X obj 322 271 cnv 10 10 10 empty \$0-route-op1 1 3 5 0 10 #000000
+#fcfcfc 0;
 #X obj 83 304 tgl 10 0 \$0-anticlick \$0-anticlick-r anticlick 15 4
-0 10 -1 -262144 -1 0 1;
+0 10 #000000 #fcfcfc #000000 0 1;
 #X obj 148 238 hsl 74 10 0 100 0 0 \$0-op2-lfo-fm \$0-op2-lfo-fm-r
-fm -20 4 0 10 -1 -262144 -1 0 1;
+fm -20 4 0 10 #000000 #fcfcfc #000000 0 1;
 #X obj 255 225 hsl 74 10 0 100 0 0 \$0-op3-lfo-am \$0-op3-lfo-am-r
-am -20 4 0 10 -1 -262144 -1 0 1;
+am -20 4 0 10 #000000 #fcfcfc #000000 0 1;
 #X obj 363 238 hsl 74 10 0 100 0 0 \$0-op4-lfo-fm \$0-op4-lfo-fm-r
-fm -20 4 0 10 -1 -262144 -1 0 1;
+fm -20 4 0 10 #000000 #fcfcfc #000000 0 1;
 #X obj 51 287 vsl 10 39 0 100 0 0 \$0-op1-self-lfo-fm \$0-op1-self-lfo-fm-r
-fm 0 -9 0 10 -1 -262144 -1 0 1;
-#X obj 215 312 cnv 15 15 15 empty \$0-text fm 0 6 0 10 -262144 -1 0
-;
+fm 0 -9 0 10 #000000 #fcfcfc #000000 0 1;
+#X obj 215 312 cnv 15 15 15 empty \$0-text fm 0 6 0 10 #fcfcfc #000000
+0;
 #X obj 233 312 nbx 3 15 0 1e+37 0 0 \$0-lfo-fm \$0-lfo-fm-r c 41 8
-0 10 -1 -262144 -1 0 256;
+0 10 #000000 #fcfcfc #000000 0 256;
 #N canvas 823 65 267 678 targetall 0;
 #X obj 21 130 outlet;
 #X obj 21 91 list trim;
@@ -2989,51 +2995,53 @@ fm 0 -9 0 10 -1 -262144 -1 0 1;
 #X connect 3 0 2 0;
 #X restore 601 298 pd targetall;
 #X obj 485 327 clone ./voice~ 16;
-#X obj 26 94 cnv 15 75 75 empty \$0-text empty 20 12 0 14 -262144 -1
+#X obj 26 94 cnv 15 75 75 empty \$0-text empty 20 12 0 14 #fcfcfc #000000
 0;
 #X obj 21 107 vsl 10 70 0 100 0 0 \$0-op1-gain \$0-op1-gain-r op1:
-0 -12 0 10 -1 -262144 -1 0 1;
+0 -12 0 10 #000000 #fcfcfc #000000 0 1;
 #X obj 57 105 nbx 4 15 0 1e+37 0 0 \$0-op1-att \$0-op1-att-r ms 50
-8 0 10 -1 -262144 -1 0 256;
+8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 57 125 nbx 4 15 0 1e+37 0 0 \$0-op1-dec \$0-op1-dec-r ms 50
-8 0 10 -1 -262144 -1 0 256;
+8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 57 145 nbx 4 15 -100 1e+37 0 0 \$0-op1-sus \$0-op1-sus-r dB
-50 8 0 10 -1 -262144 -1 0 256;
+50 8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 57 165 nbx 4 15 0 1e+37 0 0 \$0-op1-rel \$0-op1-rel-r ms 50
-8 0 10 -1 -262144 -1 0 256;
+8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 50 205 nbx 5 15 -1e+37 1e+37 0 0 \$0-op1-fine \$0-op1-fine-r
-empty 58 8 0 10 -1 -262144 -1 0 256;
+empty 58 8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 41 225 hsl 74 10 0 100 0 0 \$0-op1-lfo-am \$0-op1-lfo-am-r am
--20 4 0 10 -1 -262144 -1 0 1;
+-20 4 0 10 #000000 #fcfcfc #000000 0 1;
 #X obj 50 185 nbx 4 15 -1e+37 1e+37 0 0 \$0-op1-freq \$0-op1-freq-r
-empty 0 -8 0 10 -1 -262144 -1 0 256;
-#X obj 36 105 cnv 15 15 15 empty \$0-text att 0 6 0 10 -262144 -1 0
-;
-#X obj 36 125 cnv 15 15 15 empty \$0-text dec 0 6 0 10 -262144 -1 0
-;
-#X obj 36 145 cnv 15 15 15 empty \$0-text sus 0 6 0 10 -262144 -1 0
-;
-#X obj 36 165 cnv 15 15 15 empty \$0-text rel 0 6 0 10 -262144 -1 0
-;
-#X obj 21 185 cnv 15 15 15 empty \$0-text freq 0 6 0 10 -262144 -1
+empty 0 -8 0 10 #000000 #fcfcfc #000000 0 256;
+#X obj 36 105 cnv 15 15 15 empty \$0-text att 0 6 0 10 #fcfcfc #000000
 0;
-#X obj 21 205 cnv 15 15 15 empty \$0-text fine 0 6 0 10 -262144 -1
+#X obj 36 125 cnv 15 15 15 empty \$0-text dec 0 6 0 10 #fcfcfc #000000
+0;
+#X obj 36 145 cnv 15 15 15 empty \$0-text sus 0 6 0 10 #fcfcfc #000000
+0;
+#X obj 36 165 cnv 15 15 15 empty \$0-text rel 0 6 0 10 #fcfcfc #000000
+0;
+#X obj 21 185 cnv 15 15 15 empty \$0-text freq 0 6 0 10 #fcfcfc #000000
+0;
+#X obj 21 205 cnv 15 15 15 empty \$0-text fine 0 6 0 10 #fcfcfc #000000
 0;
 #X obj 41 238 hsl 74 10 0 100 0 0 \$0-op1-lfo-fm \$0-op1-lfo-fm-r fm
--20 4 0 10 -1 -262144 -1 0 1;
-#X connect 0 0 28 0;
-#X connect 1 0 100 0;
-#X connect 16 0 0 1;
-#X connect 17 0 100 0;
-#X connect 18 0 100 0;
+-20 4 0 10 #000000 #fcfcfc #000000 0 1;
+#X obj 393 287 nbx 3 15 -100 12 0 0 \$0-out \$0-out-r out 0 -8 0 10
+#202020 #f4f4dc #202020 0 256;
+#X connect 0 0 27 0;
+#X connect 1 0 99 0;
+#X connect 15 0 0 1;
+#X connect 16 0 99 0;
+#X connect 17 0 99 0;
+#X connect 18 0 99 0;
 #X connect 19 0 100 0;
-#X connect 20 0 101 0;
-#X connect 21 0 100 0;
-#X connect 26 0 100 0;
-#X connect 27 0 20 0;
-#X connect 29 0 30 0;
-#X connect 34 0 33 0;
-#X connect 86 0 100 0;
-#X connect 100 0 101 1;
-#X connect 101 0 0 0;
+#X connect 20 0 99 0;
+#X connect 25 0 99 0;
+#X connect 26 0 19 0;
+#X connect 28 0 29 0;
+#X connect 33 0 32 0;
+#X connect 85 0 99 0;
+#X connect 99 0 100 1;
+#X connect 100 0 0 0;
 #X coords 0 -1 1 1 430 255 2 15 83;
